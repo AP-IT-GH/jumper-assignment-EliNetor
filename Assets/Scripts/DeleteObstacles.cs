@@ -12,6 +12,7 @@ public class DeleteObstacles : MonoBehaviour
             Vector3 spawnpoint = new Vector3 (0.19f, 0.71f, -4.85f);
             Instantiate(prefabToSpawn, spawnpoint, Quaternion.identity);
         }
+        Destroy(collision.gameObject.transform.parent.gameObject);
         Destroy(collision.gameObject);
 
     }
