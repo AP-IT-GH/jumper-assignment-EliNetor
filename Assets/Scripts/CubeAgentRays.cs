@@ -10,12 +10,16 @@ public class CubeAgentRays : Agent
     private bool jump = true;
     public Rigidbody rb;
     public float jumpForce;
+    [SerializeField] private GameObject prefabToSpawn;
     public override void OnEpisodeBegin()
     {
         jump = true;
 
         this.transform.localPosition = new Vector3(0.17f, 0.57f, 3.79f);
         rb.transform.rotation = Quaternion.Euler(0, -180, 0);
+
+        Vector3 spawnpoint = new Vector3(0.19f, 0.71f, -4.85f);
+        Instantiate(prefabToSpawn, spawnpoint, Quaternion.identity);
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -43,8 +47,7 @@ public class CubeAgentRays : Agent
         if (collision.gameObject.CompareTag("hit"))
         {
             AddReward(-1f);
-            Debug.Log('h');
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject.transform.parent.gameObject);
             EndEpisode();
         }
         else if (collision.gameObject.CompareTag("point"))
@@ -56,10 +59,5 @@ public class CubeAgentRays : Agent
         {
             jump = true;
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        
     }
 }

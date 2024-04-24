@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class MovingForward : MonoBehaviour
 {
-    public float speed = 1.0f; 
+    public float minSpeed = 1.0f; 
+    public float maxSpeed = 5.0f;
+    private float speed;
 
-    void Update()
+    private void Start()
     {
+        speed = Random.Range(minSpeed, maxSpeed);
+    }
+    void Update()
+    { 
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 }
