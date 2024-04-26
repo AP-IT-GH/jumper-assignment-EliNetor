@@ -23,7 +23,7 @@ Nu moeten de objecten nog de juiste componeneten krijgen, hieronder staan screen
 ### Agent
 ![agent component](./pictures/5.JPG)\
 ![agent component](./pictures/6.JPG)\
-![agent component](./pictures/7.JPG)\
+![agent component](./pictures/7.JPG)
 
 ### Wall
 ![wall component](./pictures/8.JPG)
@@ -77,6 +77,6 @@ Dit is alles wat er nodig is om dit project op te bouwen. Vervolgens kan je MLag
 
 
 # Extra MLagent statistics
-![MLagent data](./pictures/19.PNG)\
+![MLagent data](./pictures/19.png)\
 Op deze grafiek kan je zien dat de rewards naar beneden gaan, dit komt doordat de agent steeds tegen het zwarte block botst en dus punten verliest (steeds -1). Wat best wel raar is is dat het op het einde gigantisch naar boven schiet. Wel zien we ook dat het terug naar benden aan het gaan was.\
 Doordat ik niet de snelste pc heb heb ik niet erg veel testen kunnen doen dus is de sampledata ook maar klein en maakt het model dat ik heb getrained nog erg veel fouten.
